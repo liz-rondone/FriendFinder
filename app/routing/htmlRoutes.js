@@ -1,32 +1,18 @@
+var path = require('path');
 
+module.exports = function(app) {
+    // HTML GET REQUESTS 
+    // takes the user to the HTML page
+    app.get('/', function(req, res) {
+        res.sendFile(path.join(__dirname, "/../public/home.html"));
+    });
 
-// basic route that sends the user first to the AJAX page
-app.get('/', function(request, response) {
-    response.sendFile(path.join (__dirname, 'home.html'));
-});
+    app.get('/survey', function(req, res) {
+        res.sendFile(path.join(__dirname, '/../public/survey.html'));
+    });
 
-app.get('/survey', function(request, response) {
-    response.sendFile(path.join (__dirname, 'survey.html'));
-});
-
-// get all results
-app.get('/all', function(request, response) {
-    response.json(answers);
-});
-
-// search for specific results (or all results) - provides JSON
-app.get('/api/:results?', function(request, results) {
-    var chosen = request.params.answers;
-
-    if(chosen) {
-        console.log(chosen);
-
-        for(var i = 0; i < answers.length; i++) {
-            if (chosen === answers[i].routeName) {
-                return results.json(answers[i]);
-            }
-        }
-        return results.json(false);
-    }
-    return results.json(answers);
-});
+    // if no matching route is found default to home
+    app.use(function(req, res) {
+        res.sendFile(path.join(__dirname, '/../public/home.html'));
+    });
+};

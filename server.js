@@ -3,7 +3,7 @@ var bodyParser = require("body-parser");
 var path = require("path");
 
 var app = express();
-var PORT = 3000;
+var PORT = process.env.PORT || 3000;
 
 // create empty array to store reserved tables
 var results = [];
@@ -14,4 +14,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-// create basic routes for serving html files
+// routes give servers a route of hot to respond when users visit or request data from various URLs
+require('./app/routing/apiRoutes')(app);
+require('./app/routing/htmlRoutes')(app);
+
+// start the server
+app.listen(PORT, function() {
+    console.log('App listening on PORT: ' + PORT);
+});
