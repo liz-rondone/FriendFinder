@@ -14,24 +14,8 @@ var friendsArr = [
             4,
             1
         ]
-    },
-    {
-        name: inputName,
-        photo: inputPhoto,
-        scores:[
-            5,
-            1,
-            4,
-            4,
-            5,
-            1,
-            2,
-            5,
-            4,
-            1
-        ]
     }
 ];
 
-//export arr
+//export array
 module.exports = friendsArr;

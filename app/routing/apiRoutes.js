@@ -15,27 +15,3 @@ module.exports = function(app) {
         res.json(true);
     });
 };
-
-
-// app.post(/friends, req, res) { //psuedocode
-//     //temp best friend
-//     var bestFriend = {
-//         name: '',
-//         photo: '',
-//         difference: Infinity
-//     }
-
-//     var me = req.body;
-//     // loop through db of friends {
-//         var currentFriend = friends[i];
-//         //loop through scores  
-//         var j = 0; loop through scores
-//         currentFriendScore = currentFriend.scores j++
-//         me.scores
-//         Abs(currentFriendScore - me.score)
-//         if (totaldif < bestFriend.difference) // true first time
-//             bestFriend.name = currentFriend.name
-//     }
-
-//     res.json(bestFriend)
-// }

@@ -47,7 +47,7 @@
 
       <!-- QUESTION 1 -->
       <div class="form-group">
-        <label for="select" class="col-lg-2 control-label"><h3>1. Spongebob does, in fact, live in a pineapple under the sea.</h3></label>
+        <label for="q1" class="col-lg-2 control-label"><h3>1. Spongebob does, in fact, live in a pineapple under the sea.</h3></label>
         <div class="col-lg-10">
           <select class="form-control" id="q1" required>
             <option disabled selected value>What's your opinion?</option>
@@ -62,7 +62,7 @@
 
       <!-- QUESTION 2 -->
       <div class="form-group">
-        <label for="select" class="col-lg-2 control-label"><h3>2. The proper pronunciation of “pecan” is PEE-can.</h3></label>
+        <label for="q2" class="col-lg-2 control-label"><h3>2. The proper pronunciation of “pecan” is PEE-can.</h3></label>
         <div class="col-lg-10">
           <select class="form-control" id="q1" required>
             <option disabled selected value>What's your opinion?</option>
@@ -77,7 +77,7 @@
 
       <!-- QUESTION 3 -->
       <div class="form-group">
-        <label for="select" class="col-lg-2 control-label"><h3>3. The moon landing with Neil Armstrong was staged by the federal government.</h3></label>
+        <label for="q3" class="col-lg-2 control-label"><h3>3. The moon landing with Neil Armstrong was staged by the federal government.</h3></label>
         <div class="col-lg-10">
           <select class="form-control" id="q1" required>
             <option disabled selected value>What's your opinion?</option>
@@ -92,7 +92,7 @@
 
       <!-- QUESTION 4 -->
       <div class="form-group">
-        <label for="select" class="col-lg-2 control-label"><h3>4. The more tattoos someone has, the cooler they are.</h3></label>
+        <label for="q4" class="col-lg-2 control-label"><h3>4. The more tattoos someone has, the cooler they are.</h3></label>
         <div class="col-lg-10">
           <select class="form-control" id="q1" required>
             <option disabled selected value>What's your opinion?</option>
@@ -107,7 +107,7 @@
 
       <!-- QUESTION 5 -->
       <div class="form-group">
-        <label for="select" class="col-lg-2 control-label"><h3>5. Cats do not make proper pets.</h3></label>
+        <label for="q5" class="col-lg-2 control-label"><h3>5. Cats do not make proper pets.</h3></label>
         <div class="col-lg-10">
           <select class="form-control" id="q1" required>
             <option disabled selected value>What's your opinion?</option>
@@ -122,7 +122,7 @@
 
       <!-- QUESTION 6 -->
       <div class="form-group">
-        <label for="select" class="col-lg-2 control-label"><h3>6. An apple a day keeps the doctor away.</h3></label>
+        <label for="q6" class="col-lg-2 control-label"><h3>6. An apple a day keeps the doctor away.</h3></label>
         <div class="col-lg-10">
           <select class="form-control" id="q1" required>
             <option disabled selected value>What's your opinion?</option>
@@ -137,7 +137,7 @@
 
       <!-- QUESTION 7 -->
       <div class="form-group">
-        <label for="select" class="col-lg-2 control-label"><h3>7. Cootie shots should be covered by health insurance.</h3></label>
+        <label for="q7" class="col-lg-2 control-label"><h3>7. Cootie shots should be covered by health insurance.</h3></label>
         <div class="col-lg-10">
           <select class="form-control" id="q1" required>
             <option disabled selected value>What's your opinion?</option>
@@ -152,7 +152,7 @@
 
       <!-- QUESTION 8 -->
       <div class="form-group">
-        <label for="select" class="col-lg-2 control-label"><h3>8. Albert Einstein was as handsome as he was smart.</h3></label>
+        <label for="q8" class="col-lg-2 control-label"><h3>8. Albert Einstein was as handsome as he was smart.</h3></label>
         <div class="col-lg-10">
           <select class="form-control" id="q1" required>
             <option disabled selected value>What's your opinion?</option>
@@ -167,7 +167,7 @@
 
       <!-- QUESTION 9 -->
       <div class="form-group">
-        <label for="select" class="col-lg-2 control-label"><h3>9. Football refers to American soccer.</h3></label>
+        <label for="q9" class="col-lg-2 control-label"><h3>9. Football refers to American soccer.</h3></label>
         <div class="col-lg-10">
           <select class="form-control" id="q1" required>
             <option disabled selected value>What's your opinion?</option>
@@ -182,7 +182,7 @@
 
       <!-- QUESTION 10 -->
       <div class="form-group">
-        <label for="select" class="col-lg-2 control-label"><h3>10. There is no "I" in team.</h3></label>
+        <label for="q10" class="col-lg-2 control-label"><h3>10. There is no "I" in team.</h3></label>
         <div class="col-lg-10">
           <select class="form-control" id="q1" required>
             <option disabled selected value>What's your opinion?</option>
@@ -198,7 +198,7 @@
       <!-- SUBMIT BUTTON -->
       <div class="form-group" style="margin-top: 50px;">
         <div class="col-lg-10 col-lg-offset-2">
-          <button type="submit" class="btn btn-info" data-toggle="modal" data-target="#match">Submit</button>
+          <button type="submit" class="btn btn-info" data-toggle="modal" data-target="#bffAlert" id="submitButton">Submit</button>
         </div>
       </div>
 
@@ -207,7 +207,7 @@
   </form>
 
   <!-- MODAL POPUP -->
-  <div class="modal" id="match">
+  <div class="modal" id="bffAlert">
     <div class="modal-dialog">
       <div class="modal-content">
 
@@ -216,8 +216,8 @@
           <h4 class="modal-title">Meet Your New Friend!</h4>
         </div>
 
-        <div class="modal-body">
-          <p>The Incredible Hulk</p>
+        <div class="modal-body" id="bffBody">
+          <h3>The Incredible Hulk</h3>
         </div>
 
         <div class="modal-footer">
@@ -236,6 +236,80 @@
 
 
   <!--<<<<<<<<<<<<<<< SCRIPTS >>>>>>>>>>>>>>>-->
+
+  <script type='text/javascript'>
+
+    $('#submitButton').on('click', function(event) {
+      event.preventDefault();
+
+      var q1 = parseInt($('#q1').val().trim()),
+      var q2 = parseInt($('#q2').val().trim()),
+      var q3 = parseInt($('#q3').val().trim()),
+      var q4 = parseInt($('#q4').val().trim()),
+      var q5 = parseInt($('#q5').val().trim()),
+      var q6 = parseInt($('#q6').val().trim()),
+      var q7 = parseInt($('#q7').val().trim()),
+      var q8 = parseInt($('#q8').val().trim()),
+      var q9 = parseInt($('#q9').val().trim()),
+      var q10 = parseInt($('#q10').val().trim()),
+
+      var newFriend = {
+        name: $('#inputName').val().trim(),
+        photo: $('#inputPhoto').val().trim(),
+        scores: [];
+      };
+
+      newFriendScore = newFriend.scores
+      newFriendScore.push(q1, q2, q3, q4, q5, q6, q7, q8,q9, q10);
+      console.log(newFriend);
+
+      $.post('/api/friendsList', newFriend, function(data) {
+        result = JSON.parse(data);
+        var $img = $('<img>', { src: result.photo, alt: result.name });
+        $('#bffBody').html(result.name).append('<br>').append($img);
+        
+        // clear form
+        $('#inputName').val('');
+        $('#inputPhoto').val('');
+        $('#q1').val(1);
+        $('#q2').val(1);
+        $('#q3').val(1);
+        $('#q4').val(1);
+        $('#q5').val(1);
+        $('#q6').val(1);
+        $('#q7').val(1);
+        $('#q8').val(1);
+        $('#q9').val(1);
+        $('#q10').val(1);
+      });
+      
+    });
+
+    // app.post(/friends, req, res) { //psuedocode
+//     //temp best friend
+//     var bestFriend = {
+//         name: '',
+//         photo: '',
+//         difference: Infinity
+//     }
+
+//     var me = req.body;
+//     // loop through db of friends {
+//         var currentFriend = friends[i];
+//         //loop through scores  
+//         var j = 0; loop through scores
+//         currentFriendScore = currentFriend.scores j++
+//         me.scores
+//         Abs(currentFriendScore - me.score)
+//         if (totaldif < bestFriend.difference) // true first time
+//             bestFriend.name = currentFriend.name
+//     }
+
+//     res.json(bestFriend)
+// }
+
+  </script>
+
 
 	<!-- jQuery -->
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
